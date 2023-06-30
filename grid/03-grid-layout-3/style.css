@@ -22,16 +22,21 @@
   background-color: #393f4d;
   grid-column: 1/3;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
 }
 
 .menu ul,
 .menu li {
   font-size: 16px;
+  list-style: none;
 }
 
 .sidebar {
   background-color: #C50208;
+  grid-row: 2/span 2;
+  display:grid;
+  place-items: stretch;
+  gap:50px;
 }
 
 .sidebar .photo {
@@ -52,15 +57,21 @@
 
 .nav {
   background-color: #C50208;
+  
 }
 
 .nav ul li {
   font-size: 16px;
   text-transform: uppercase;
+  list-style: none;
 }
 
 .article {
   background-color: #bccbde;
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap:15px;
 }
 
 .article p {
@@ -74,6 +85,7 @@
   background-color: #FFFFFF;
   color: black;
   text-align: center;
+  height:200px;
 }
 
 .card p {
@@ -95,4 +107,12 @@
 .footer p {
   font-size: 13px;
   font-weight: normal;
+}
+.nav ul{
+  display:grid;
+  grid-template-columns: repeat(3,1fr);
+}
+.menu ul{
+  display:grid;
+  grid-template-columns: repeat(4,1fr);
 }
